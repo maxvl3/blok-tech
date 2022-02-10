@@ -4,19 +4,28 @@
   "description": "een filter optie",
   "main": "index.js",
   "scripts": {
-    "test": "nodemon index.js"
+    "start": "nodemon index.js"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/maxvl3/blok-tech.git"
   },
   "keywords": [
-    "filter"
+    "filter",
+    "backend",
+    "node.js"
   ],
   "author": "Max",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/maxvl3/blok-tech/issues"
   },
-  "homepage": "https://github.com/maxvl3/blok-tech#readme"
+  "homepage": "https://github.com/maxvl3/blok-tech#readme",
+  "dependencies": {
+    "camelcase": "^6.3.0",
+    "express": "^4.17.2"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.15"
+  }
 }
