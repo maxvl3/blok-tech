@@ -1,0 +1,22 @@
+{
+  "name": "desktop",
+  "version": "1.0.0",
+  "description": "een filter optie",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/maxvl3/blok-tech.git"
+  },
+  "keywords": [
+    "filter"
+  ],
+  "author": "Max",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/maxvl3/blok-tech/issues"
+  },
+  "homepage": "https://github.com/maxvl3/blok-tech#readme"
+}
