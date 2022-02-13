@@ -1,3 +1,3 @@
 # blok-tech
 
-test
+Code CLI interactive tutorial: bWF4dmwzCg==
