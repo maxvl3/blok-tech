@@ -1,3 +1,1 @@
-# blok-tech
-
-Code CLI interactive tutorial: bWF4dmwzCg==
+Komt er snel aan
