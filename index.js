@@ -1,11 +1,25 @@
 const express = require('express')
 const app = express()
-const port = 3000
+const { engine } = require('express-handlebars')
+const PORT = 8000;
 
-app.get('/', (req, res) => {
-  res.send('Hoi!')
-})
+app.engine('handlebars', engine())
+app.set('view engine', 'handlebars')
+app.set('views', './view')
 
-app.listen(port, () => {
-  console.log(`Example app listening on port ${port}`)
+app.use('/static', express.static('static'))
+
+app.get('/', naarHome)
+app.get('/login', naarLogIn)
+
+function naarHome(req, res) {
+    res.render('home')
+}
+
+function naarLogIn(req, res) {
+    res.render('login')
+}
+
+app.listen(PORT, () => {
+    console.log('app running on port', PORT);
 })
