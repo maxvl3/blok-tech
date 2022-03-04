@@ -1,8 +1,24 @@
 body{
-    color: black;
+    background-color: grey;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 form{
-    display: flex;
-    flex-direction: column;
+    background-color: black;
+    width: 10em;
+    height: 10em;
+    padding: 1em;
+    border-radius: 1em;
+    color: white;
+}
+
+form button{
+    background-color: white;
+    padding: 0.5em;
+    border-radius: 1em;
+    border: none;
+    color: black;
+    float: right;
 }
