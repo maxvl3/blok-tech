@@ -1,7 +1,7 @@
 const express = require('express')
 const app = express()
 const { engine } = require('express-handlebars')
-const PORT = 8000;
+const PORT = 8000
 
 app.engine('handlebars', engine())
 app.set('view engine', 'handlebars')
