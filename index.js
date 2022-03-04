@@ -28,6 +28,7 @@ app.listen(PORT, () => {
 
 var express = require('express');
 var bodyParser = require('body-parser');
+var { engine } = require('express-handlebars')
 var multer = require('multer');
 var upload = multer();
 var app = express();
@@ -36,22 +37,21 @@ app.get('/', function(req, res){
    res.render('form');
 });
 
-app.set('view engine', 'pug');
+app.engine('handlebars', engine())
+app.set('view engine', 'handlebars')
 app.set('views', './view');
 
-// for parsing application/json
+//https://www.tutorialspoint.com/expressjs/expressjs_form_data.htm
+
 app.use(bodyParser.json()); 
 
-// for parsing application/xwww-
 app.use(bodyParser.urlencoded({ extended: true })); 
-//form-urlencoded
 
-// for parsing multipart/form-data
 app.use(upload.array());
 app.use('/static', express.static('static'))
 
 app.post('/', function(req, res){
    console.log(req.body);
-   res.send("recieved your request!");
+   res.send(req.body);
 });
 app.listen(8000);
