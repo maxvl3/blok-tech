@@ -7,57 +7,18 @@
 
 body{
     background-color: grey;
-    display: flex;
-    flex-direction: column;
-    gap: 2em;
-    margin-bottom: 5em;
 }
 
 header{
     background-color: black;
-    color: greenyellow;
+    color: burlywood;
     padding: 1em;
     text-align: center;
 }
 
-form{
-    background-color: black;
-    padding: 2em;
-    border-radius: 1em;
-    color: white;
-    display: flex;
-    flex-direction: column;
-    max-width: fit-content;
-    margin: auto;
-    gap: 1em;
-    box-shadow: 0.5em 0.5em greenyellow;
-}
-
-form div{
-    display: flex;
-    flex-direction: column;
-    gap: 0.3em;
-}
-
-form input{
-    padding: 1em;
-    border-radius: 1em;
-    border: none;
-}
-
-form button{
-    background-color: greenyellow;
-    padding: 0.5em;
-    border-radius: 1em;
-    border: none;
-    color: black;
-    width: fit-content;
-    font-size: 1em;
-}
-
 footer{
     background-color: black;
-    color: greenyellow;
+    color: burlywood;
     padding: 1em;
     text-align: center;
     position:fixed;
@@ -66,25 +27,83 @@ footer{
     right: 0;
 }
 
-section{
-    background-color: greenyellow;
-    width: 30em;
-    align-self: center;
+
+
+.registeren{
+    background-color: black;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    max-width: 20em;
+    margin: auto;
+    margin-top: 1em;
+    margin-bottom: 1em;
+    padding: 2em;
+    border-radius: 1em;
+    gap: 1em;
+}
+
+.registeren form{
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+}
+
+.registeren form div{
+    display: flex;
+    flex-direction: column;
+    gap: 0.5em;
+}
+
+.registeren form div input{
     padding: 1em;
     border-radius: 1em;
-}
-
-section p{
-    color:  black;
-}
-
-button{
-    background-color: black;
-    padding: 0.5em;
-    border-radius: 1em;
     border: none;
-    color: greenyellow;
+    outline-color: burlywood;
+}
+
+.registeren form button{
+    background-color: burlywood;
+    color: black;
+    border: none;
+    border-radius: 1em;
+    padding: 1em;
+}
+
+.home{
+    margin: auto;
+    max-width: 50em;
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+    margin-top: 1em;
+    margin-bottom: 5em;
+}
+
+.home button{
     width: fit-content;
-    font-size: 2em;
-    align-self: center;
+    align-self: flex-end;
+    background-color: black;
+    color: burlywood;
+    border: none;
+    border-radius: 1em;
+    padding: 1em;
+    font-size: 1em;
+    font-weight: bold;
+}
+
+.home div{
+    display: flex;
+    gap: 1em;
+    flex-wrap: wrap;
+}
+
+.home div section{ 
+    background-color: white;
+    color: black;
+    flex-basis: 45%;
+    padding: 1em;
+    flex-grow: 1;
+    border-radius: 1em;
+    height: 10em;
 }
