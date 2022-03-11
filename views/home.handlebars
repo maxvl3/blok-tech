@@ -1,9 +1,11 @@
-<body>
+<section class="home">
 	<button>Filter</button>
-    {{#each users}}
-		<section>
-			<h3>{{this.naam}}</h3>
-			<p>{{this.email}}</p>
-		</section>
-	{{/each}}
-</body>
+	<div>
+		{{#each users}}
+			<section>
+				<h3>{{this.naam}}</h3>
+				<p>{{this.email}}</p>
+			</section>
+		{{/each}}
+	</div>
+</section>
