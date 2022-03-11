@@ -1,57 +1,60 @@
-/*
+// Modules worden gekoppeld
 const express = require('express')
 const app = express()
+const bodyParser = require('body-parser')
+const PORT = 3000
+
+//Handlebars wordt gekoppeld
 const { engine } = require('express-handlebars')
-const PORT = 8000
-
 app.engine('handlebars', engine())
 app.set('view engine', 'handlebars')
-app.set('views', './view')
+app.set('views', './views')
+app.engine('handlebars', engine({
+	layoutsDir: `${__dirname}/views/layouts`,
+	extname: 'handlebars',
+	defaultLayout: 'main',
+	partialsDir: `${__dirname}/views/partials`
+}));
 
+//.ENV wordt gekoppeld
+require('dotenv').config()
+
+//Statische content kunnen serveren
 app.use('/static', express.static('static'))
 
-app.get('/', naarHome)
-app.get('/login', naarLogIn)
+//Geen idee wat dit precies doet, maar het is nodig voor het verwerken van een formulier
+app.use(bodyParser.json())
+app.use(bodyParser.urlencoded({ extended: true }))
 
-function naarHome(req, res) {
-    res.render('home')
-}
+//Database wordt gekoppeld
+const { MongoClient } = require('mongodb')
+const url = `mongodb+srv://${process.env.DB_USERNAME}:${process.env.DB_PASSWORD}@blok-tech.lnm97.mongodb.net/maxdb?retryWrites=true&w=majority`;
+const client = new MongoClient(url, { useNewUrlParser: true, useUnifiedTopology: true })
+client.connect(err => {
+	userCollection = client.db('maxdb').collection('gebruikers');
+	console.log('connectie met de database is gemaakt');
+});
 
-function naarLogIn(req, res) {
-    res.render('login')
-}
+//Render de pagina op te registeren
+app.get('/', (req, res) => {
+    res.render('form');
+});
 
-app.listen(PORT, () => {
-    console.log('app running on port', PORT);
+//Stuurt formulier input naar database en redirect een nieuwe page
+app.post('/', async (req,res) => {
+	console.log(req.body);
+	const { naam, email } = req.body;
+	userCollection.insertOne({ naam: naam, email: email });
+	res.redirect('home');
+});
+
+//nieuwe page haalt alle data op en toont deze
+app.get('/home', async (req, res) => {
+	const users = await userCollection.find().toArray();
+	res.render('home', { users });
+});
+
+//geeft aan op welke poort de app werkt
+app.listen(PORT, function () {
+  console.log('Bekijk de app via poort: ', PORT)
 })
-*/
-
-var express = require('express');
-var bodyParser = require('body-parser');
-var { engine } = require('express-handlebars')
-var multer = require('multer');
-var upload = multer();
-var app = express();
-
-app.get('/', function(req, res){
-   res.render('form');
-});
-
-app.engine('handlebars', engine())
-app.set('view engine', 'handlebars')
-app.set('views', './view');
-
-//https://www.tutorialspoint.com/expressjs/expressjs_form_data.htm
-
-app.use(bodyParser.json()); 
-
-app.use(bodyParser.urlencoded({ extended: true })); 
-
-app.use(upload.array());
-app.use('/static', express.static('static'))
-
-app.post('/', function(req, res){
-   console.log(req.body);
-   res.send(req.body);
-});
-app.listen(8000);
