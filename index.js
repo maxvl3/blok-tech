@@ -22,7 +22,7 @@ require('dotenv').config()
 //Statische content kunnen serveren
 app.use('/static', express.static('static'))
 
-//Geen idee wat dit precies doet, maar het is nodig voor het verwerken van een formulier
+//Geen idee wat dit precies doet, maar het is nodig voor het verwerken van een form
 app.use(bodyParser.json())
 app.use(bodyParser.urlencoded({ extended: true }))
 
