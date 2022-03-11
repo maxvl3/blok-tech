@@ -9,12 +9,6 @@ const { engine } = require('express-handlebars')
 app.engine('handlebars', engine())
 app.set('view engine', 'handlebars')
 app.set('views', './views')
-app.engine('handlebars', engine({
-	layoutsDir: `${__dirname}/views/layouts`,
-	extname: 'handlebars',
-	defaultLayout: 'main',
-	partialsDir: `${__dirname}/views/partials`
-}));
 
 //.ENV wordt gekoppeld
 require('dotenv').config()
@@ -44,11 +38,11 @@ app.get('/', (req, res) => {
 app.post('/', async (req,res) => {
 	console.log(req.body);
 	const { naam, email } = req.body;
-	userCollection.insertOne({ naam: naam, email: email });
+	await userCollection.insertOne({ naam: naam, email: email });
 	res.redirect('home');
 });
 
-//nieuwe page haalt alle data op en toont deze
+//Nieuwe page haalt alle data op en toont deze
 app.get('/home', async (req, res) => {
 	const users = await userCollection.find().toArray();
 	res.render('home', { users });
