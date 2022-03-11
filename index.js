@@ -53,7 +53,7 @@ app.use(function (req, res, next) {
 	res.status(404).send("Deze pagin kan niet gevonden worden!");
 });
 
-//geeft aan op welke poort de app werkt
+//geeft aan op welke poort de app runt
 app.listen(PORT, function () {
   console.log('Bekijk de app via poort: ', PORT)
 })
