@@ -10,6 +10,7 @@ body{
     display: flex;
     flex-direction: column;
     gap: 2em;
+    margin-bottom: 5em;
 }
 
 header{
@@ -59,8 +60,31 @@ footer{
     color: greenyellow;
     padding: 1em;
     text-align: center;
-    position: absolute;
-    bottom: 0;
+    position:fixed;
+    bottom:0;
     left: 0;
     right: 0;
+}
+
+section{
+    background-color: greenyellow;
+    width: 30em;
+    align-self: center;
+    padding: 1em;
+    border-radius: 1em;
+}
+
+section p{
+    color:  black;
+}
+
+button{
+    background-color: black;
+    padding: 0.5em;
+    border-radius: 1em;
+    border: none;
+    color: greenyellow;
+    width: fit-content;
+    font-size: 2em;
+    align-self: center;
 }
