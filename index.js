@@ -35,7 +35,7 @@ client.connect(err => {
 	console.log('connectie met de database is gemaakt');
 });
 
-//Render de pagina op te registeren
+//Render de pagina om te registeren
 app.get('/', (req, res) => {
     res.render('form');
 });
