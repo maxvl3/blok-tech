@@ -54,6 +54,11 @@ app.get('/home', async (req, res) => {
 	res.render('home', { users });
 });
 
+//Indien de pagina niet kan worden gevonden
+app.use(function (req, res, next) {
+	res.status(404).send("Deze pagin kan niet gevonden worden!");
+});
+
 //geeft aan op welke poort de app werkt
 app.listen(PORT, function () {
   console.log('Bekijk de app via poort: ', PORT)
