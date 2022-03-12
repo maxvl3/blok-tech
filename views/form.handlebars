@@ -1,14 +1,55 @@
+<header>
+    <h1>ZoekOppas</h1>
+</header>
+
 <section class="registeren">
-    <h2>Registeren</h2>
+    <h2>Gebruiker toevoegen</h2>
     <form action="/", method="POST">
         <div>
-            <label for="name">Naam:</label>
-            <input type="text" name="naam" >
+            <label for="voornaam">Voornaam</label>
+            <input type="text" name="voornaam" required>
         </div>
         <div>
-            <label for="email">Email:</label>
-            <input type="text" name="email">
+            <label for="achternaam">Achternaam</label>
+            <input type="text" name="achternaam" required>
         </div>
-        <button>Verzenden</button>
+        <div>
+            <label for="geboortedatum">Geboortedatum</label>
+            <input type="date" name="geboortedatum" required>
+        </div>
+        <div>
+            <label for="geslacht">Geslacht</label>
+            <div>   
+                <input type="radio" name="geslacht" value="man" required>Man
+                <input type="radio" name="geslacht" value="vrouw" required>Vrouw
+            </div>       
+        </div>
+        <div class="beschikbaar">
+            <label for="beschikbaar">Beschikbaar</label>
+            <div>   
+                <input type="checkbox" name="beschikbaar" value="maandag">Maandag<br>
+                <input type="checkbox" name="beschikbaar" value="dinsdag">Dinsdag<br>
+                <input type="checkbox" name="beschikbaar" value="woensdag">Woensdag<br>
+                <input type="checkbox" name="beschikbaar" value="donderdag">Donderdag<br>
+            </div>
+            <div>
+                <input type="checkbox" name="beschikbaar" value="vrijdag">Vrijdag<br>
+                <input type="checkbox" name="beschikbaar" value="zaterdag">Zaterdag<br>
+                <input type="checkbox" name="beschikbaar" value="zondag">Zondag
+            </div>       
+        </div>
+        <div>
+            <label for="uurtarief">Uurtarief</label>
+            <input type="number" name="uurtarief" min="1" max="100" step="0.5" placeholder="€" required>
+        </div>
+        <button type="submit">Toevoegen</button>
     </form>
 </section>
+
+<footer>
+    <ul>
+        <li><a href=""><img src="../static/images/addicon.png" alt=""></a></li>
+        <li class="inactive"><a href="home"><img src="../static/images/homeicon.png" alt=""></a></li>
+        <li class="inactive"><a href=""><img src="../static/images/settingsicon.png" alt=""></a></li>
+    </ul>
+</footer>

@@ -1,11 +1,32 @@
+<header>
+    <h1>ZoekOppas</h1>
+	<a href="filter"><img src="../static/images/filtericon.png" alt=""></a>
+</header>
+
 <section class="home">
-	<button>Filter</button>
-	<div>
 		{{#each users}}
 			<section>
-				<h3>{{this.naam}}</h3>
-				<p>{{this.email}}</p>
+				<div></div>
+				<div>
+					<h3>{{this.voornaam}} {{this.achternaam}}</h3>
+					<p>{{this.geboortedatum}}</p>
+					<p>{{this.geslacht}}</p>
+					<ul>
+						{{#each beschikbaar}}
+						<li>{{this}}</li>
+						{{/each}}
+					</ul>
+					<p>€ {{this.uurtarief}}</p>
+				</div>
+				<button>Contact</button>
 			</section>
 		{{/each}}
-	</div>
 </section>
+
+<footer>
+    <ul>
+        <li class="inactive"><a href="/"><img src="../static/images/addicon.png" alt=""></a></li>
+        <li><a href="home"><img src="../static/images/homeicon.png" alt=""></a></li>
+        <li class="inactive"><a href=""><img src="../static/images/settingsicon.png" alt=""></a></li>
+    </ul>
+</footer>

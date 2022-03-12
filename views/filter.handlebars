@@ -1,0 +1,29 @@
+<body id="darkbackground">
+    <section class="filter">
+        <h2>Filter</h2>
+        <form action="/filter", method="POST">
+            <div>
+                <label for="geslacht">Geslacht</label>
+                <div>   
+                    <input type="radio" name="geslacht" value="man">Man
+                    <input type="radio" name="geslacht" value="vrouw">Vrouw
+                </div>       
+            </div>
+            <div class="beschikbaar">
+                <label for="beschikbaar">Beschikbaar</label>
+                <div>   
+                    <input type="checkbox" name="beschikbaar" value="maandag">Maandag<br>
+                    <input type="checkbox" name="beschikbaar" value="dinsdag">Dinsdag<br>
+                    <input type="checkbox" name="beschikbaar" value="woensdag">Woensdag<br>
+                    <input type="checkbox" name="beschikbaar" value="donderdag">Donderdag<br>
+                </div>
+                <div>
+                    <input type="checkbox" name="beschikbaar" value="vrijdag">Vrijdag<br>
+                    <input type="checkbox" name="beschikbaar" value="zaterdag">Zaterdag<br>
+                    <input type="checkbox" name="beschikbaar" value="zondag">Zondag
+                </div>       
+            </div>
+            <button type="submit">Toepassen</button>
+        </form>
+    </section>
+</body>
