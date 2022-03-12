@@ -9,6 +9,7 @@
 ## 📂 Database
 
 ## 📄 Licentie
+Er wordt gebruik gemaakt van de [MIT](https://github.com/maxvl3/blok-tech/blob/main/LICENSE) licentie binnen dit project
 
 ## ℹ️ Handige info
 Naam: Max van Liempdt<br>
