@@ -12,5 +12,7 @@
 
 ## ℹ️ Handige info
 Naam: Max van Liempdt
+
 Mail: max.van.liempdt@hva.nl
+
 Studentnummer: 500849046
