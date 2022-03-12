@@ -25,9 +25,9 @@ npm start
 ```
 
 ## 📂 Database
-De app maakt gebruik van een MongoDB Atlas database en hierin worden alle oppassen opgeslagen.
-De database structuur ziet er als volgt uit:
-<img src="githubimages/databasestructuur.png" width="50%" alt="databasestructuur">
+De app maakt gebruik van een MongoDB Atlas database en hierin worden alle oppassen opgeslagen.<br>
+De database structuur ziet er als volgt uit:<br>
+<img src="githubimages/databasestructuur.png" width="25%" alt="databasestructuur">
 
 ## 📄 Licentie
 Er wordt gebruik gemaakt van de [MIT](https://github.com/maxvl3/blok-tech/blob/main/LICENSE) licentie binnen dit project
