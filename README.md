@@ -11,8 +11,6 @@
 ## 📄 Licentie
 
 ## ℹ️ Handige info
-Naam: Max van Liempdt
-
-Mail: max.van.liempdt@hva.nl
-
+Naam: Max van Liempdt<br>
+Mail: max.van.liempdt@hva.nl<br>
 Studentnummer: 500849046
