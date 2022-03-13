@@ -5,9 +5,7 @@ ZoekOppas is een matching applicatie die het mogelijk gaat maken om een oppas te
 
 *De applicatie is ontworpen voor mobiele schermen, dus voor de beste ervaring resize je de browser of gebruik je een dev tool.*
 
-<img src="githubimages/screenshot1.png" width="30%" alt="screenshot1">
-<img src="githubimages/screenshot2.png" width="30%" alt="screenshot2">
-<img src="githubimages/screenshot3.png" width="30%" alt="screenshot3">
+<img src="githubimages/screenshotzoekoppas.png" width="100%" alt="screenshots app">
 
 ## 🛠 Feature
 Als main feature heb ik gekozen om een filter te maken. Deze zorgt ervoor dat je een oppas kunt vinden die aan jou eisen voldoet. Je kunt de filter gebruiken door naar home te navigeren en rechtsboven op filter te klikken. Vervolgens vul je de filter in zoals jij wilt en zal de app gaan zoeken naar oppassen in de database.
