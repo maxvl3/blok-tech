@@ -1,7 +1,9 @@
 # <img src="githubimages/zoekoppasbanner.png" width="100%" alt="header">
 
 ## 🖤 ZoekOppas
-ZoekOppas is een matching applicatie die het mogelijk gaat maken om een oppas te vinden voor uw kind! 
+ZoekOppas is een matching applicatie die het mogelijk gaat maken om een oppas te vinden voor uw kind!
+
+*De applicatie is ontworpen voor mobiele schermen, dus voor de beste ervaring resize je de browser of gebruik je een dev tool.*
 
 ## 🛠 Feature
 Als main feature heb ik gekozen om een filter te maken. Deze zorgt ervoor dat je een oppas kunt vinden die aan jou eisen voldoet. Je kunt de filter gebruiken door naar home te navigeren en rechtsboven op filter te klikken. Vervolgens vul je de filter in zoals jij wilt en zal de app gaan zoeken naar oppassen in de database.
