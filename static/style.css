@@ -139,7 +139,7 @@ header a img{
 }
 
 .home section button{
-    border-radius: 2em 0em 0em 0em;
+    border-radius: 2em 0em 2em 0em;
     font-size: 0.75em;
     position: absolute;
     right: 0;
