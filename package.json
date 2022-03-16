@@ -4,7 +4,8 @@
   "description": "een filter optie",
   "main": "index.js",
   "scripts": {
-    "start": "nodemon index.js"
+    "start": "nodemon index.js",
+    "start:dev": "nodemon index.js"
   },
   "repository": {
     "type": "git",
