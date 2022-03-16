@@ -2,7 +2,6 @@
 const express = require('express')
 const app = express()
 const bodyParser = require('body-parser')
-const PORT = 3000
 
 
 //Handlebars wordt gekoppeld
@@ -86,6 +85,6 @@ app.use(function (req, res) {
 
 
 //geeft aan op welke poort de app werkt
-app.listen(PORT, function () {
-  console.log('Bekijk de app via poort: ', PORT)
-})
+const port = process.env.PORT || 8000; //kies je poortnummer
+app.listen(port);
+console.log("listening on " + port + "!");
