@@ -85,6 +85,6 @@ app.use(function (req, res) {
 
 
 //geeft aan op welke poort de app werkt
-const port = process.env.PORT || 8000; //kies je poortnummer
+const port = process.env.PORT || 8000;
 app.listen(port);
 console.log("listening on " + port + "!");

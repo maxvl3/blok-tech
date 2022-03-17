@@ -3,24 +3,27 @@
 	<a href="filter"><img src="../static/images/filtericon.png" alt=""></a>
 </header>
 
+<!-- Lijst met oppassen, per oppas 1 section -->
 <section class="home">
-		{{#each users}}
-			<section>
-				<div></div>
-				<div>
-					<h3>{{this.voornaam}} {{this.achternaam}}</h3>
-					<p>{{this.geboortedatum}}</p>
-					<p>{{this.geslacht}}</p>
-					<ul>
-						{{#each beschikbaar}}
-						<li>{{this}}</li>
-						{{/each}}
-					</ul>
-					<p>€ {{this.uurtarief}}</p>
-				</div>
-				<button>Contact</button>
-			</section>
-		{{/each}}
+	{{#each users}}
+	<section>
+		<div></div>
+		<div>
+			<h3>{{this.voornaam}} {{this.achternaam}}</h3>
+			<p>{{this.geboortedatum}}</p>
+			<p>{{this.geslacht}}</p>
+
+			<ul>
+				{{#each beschikbaar}}
+				<li>{{this}}</li>
+				{{/each}}
+			</ul>
+
+			<p>€ {{this.uurtarief}}</p>
+		</div>
+		<button>Contact</button>
+	</section>
+	{{/each}}
 </section>
 
 <footer>

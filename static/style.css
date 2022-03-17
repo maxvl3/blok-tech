@@ -1,3 +1,5 @@
+/* --- Reset default values + lettertype --- */
+
 *, html{
     box-sizing:border-box;
     margin: 0;
@@ -5,12 +7,20 @@
     font-family: 'Poppins', sans-serif;
 }
 
+
+/* --- Kleuren --- */
+
 :root{
     --main-color: #FFFFFF;
     --grey1: #ececec;
     --grey2: #C4C4C4;
     --second-color: #000000;
 }
+
+
+/* --- Algemene styling --- */
+/* --- Algemene styling --- */
+/* --- Algemene styling --- */
 
 body{
     padding: 2em;
@@ -30,6 +40,46 @@ button{
     align-self: flex-end;
     font-size: 1em;
 }
+
+header{
+    display: flex;
+    justify-content: space-between;
+}
+
+header a img{
+    width: 3em;
+    padding: 0.5em;
+    background-color: var(--second-color);
+    border-radius: 1em;
+}
+
+footer{
+    background-color: var(--second-color);
+    padding: 1em;
+    position: fixed;
+    bottom: 1em;
+    left: 2em;
+    right: 2em;
+    border-radius: 10em;
+}
+
+footer ul{
+    display: flex;
+    justify-content: space-around;
+}
+
+footer ul li a img{
+    width: 3em;
+}
+
+footer ul .inactive{
+    opacity: 0.75;
+}
+
+
+/* --- Registeren pagina met formulier --- */
+/* --- Registeren pagina met formulier --- */
+/* --- Registeren pagina met formulier --- */
 
 .registeren{
     background-color: var(--grey1);
@@ -91,17 +141,10 @@ button{
     bottom: 0;
 }
 
-header{
-    display: flex;
-    justify-content: space-between;
-}
 
-header a img{
-    width: 3em;
-    padding: 0.5em;
-    background-color: var(--second-color);
-    border-radius: 1em;
-}
+/* --- Home pagina met alle oppassen --- */
+/* --- Home pagina met alle oppassen --- */
+/* --- Home pagina met alle oppassen --- */
 
 .home{
     display: flex;
@@ -146,6 +189,11 @@ header a img{
     bottom: 0;
 }
 
+
+/* --- Filter pagina --- */
+/* --- Filter pagina --- */
+/* --- Filter pagina --- */
+
 .filter{
     display: flex;
     flex-direction: column;
@@ -185,27 +233,4 @@ header a img{
 
 #darkbackground{
     background-color: var(--second-color);
-}
-
-footer{
-    background-color: var(--second-color);
-    padding: 1em;
-    position: fixed;
-    bottom: 1em;
-    left: 2em;
-    right: 2em;
-    border-radius: 10em;
-}
-
-footer ul{
-    display: flex;
-    justify-content: space-around;
-}
-
-footer ul li a img{
-    width: 3em;
-}
-
-footer ul .inactive{
-    opacity: 0.75;
 }
