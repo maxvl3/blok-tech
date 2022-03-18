@@ -1,35 +1,44 @@
 <header>
-    <h1>ZoekOppas</h1>
-	<a href="filter"><img src="../static/images/filtericon.png" alt=""></a>
+  <h1>ZoekOppas</h1>
+  <a href="filter"><img src="../static/images/filtericon.png" alt="" /></a>
 </header>
 
 <!-- Lijst met oppassen, per oppas 1 section -->
 <section class="home">
-	{{#each users}}
-	<section>
-		<div></div>
-		<div>
-			<h3>{{this.voornaam}} {{this.achternaam}}</h3>
-			<p>{{this.geboortedatum}}</p>
-			<p>{{this.geslacht}}</p>
+  {{#each users}}
+    <section>
+      <div></div>
+      <div>
+        <h3>{{this.voornaam}} {{this.achternaam}}</h3>
+        <p>{{this.geboortedatum}}</p>
+        <p>{{this.geslacht}}</p>
 
-			<ul>
-				{{#each beschikbaar}}
-				<li>{{this}}</li>
-				{{/each}}
-			</ul>
+        <ul>
+          {{#each beschikbaar}}
+            <li>{{this}}</li>
+          {{/each}}
+        </ul>
 
-			<p>€ {{this.uurtarief}}</p>
-		</div>
-		<button>Contact</button>
-	</section>
-	{{/each}}
+        <p>€ {{this.uurtarief}}</p>
+      </div>
+      <button>Contact</button>
+    </section>
+  {{/each}}
 </section>
 
 <footer>
-    <ul>
-        <li class="inactive"><a href="/"><img src="../static/images/addicon.png" alt=""></a></li>
-        <li><a href="home"><img src="../static/images/homeicon.png" alt=""></a></li>
-        <li class="inactive"><a href=""><img src="../static/images/settingsicon.png" alt=""></a></li>
-    </ul>
+  <ul>
+    <li class="inactive"><a href="/"><img
+          src="../static/images/addicon.png"
+          alt=""
+        /></a></li>
+    <li><a href="home"><img
+          src="../static/images/homeicon.png"
+          alt=""
+        /></a></li>
+    <li class="inactive"><a href=""><img
+          src="../static/images/settingsicon.png"
+          alt=""
+        /></a></li>
+  </ul>
 </footer>
