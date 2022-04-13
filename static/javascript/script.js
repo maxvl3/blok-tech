@@ -19,3 +19,11 @@ document
       console.log("Yes! Ik heb een voornaam gekregen");
     }
   });
+
+  function getLocation() {
+    if (navigator.geolocation) {
+      navigator.geolocation.getCurrentPosition(showPosition);
+    } else {
+      console.log("Geolocation is not supported by this browser.");
+    }
+  }
