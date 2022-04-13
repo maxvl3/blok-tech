@@ -19,19 +19,3 @@ document
       console.log("Yes! Ik heb een voornaam gekregen");
     }
   });
-
-  navigator.geolocation.getCurrentPosition((pos) => {
-    myFunction(pos.coords.latitude, pos.coords.longitude);
-  });
-
-  var geoOps = {
-    enableHighAccuracy: true,
-    timeout: 10000 //10 seconds
-  }
-  navigator.geolocation.getCurrentPosition(successCallback, errorCallback, geoOps);
-
-  function successCallback(pos) {
-    var lat = pos.coords.latitude;
-    var lng = pos.coords.longitude;
-    alert("Latitude : " + lat + " Longitude: " + lng);
-}
